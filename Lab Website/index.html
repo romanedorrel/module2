@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Luis">
+    <title>Lab Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        
+        :root{
+            --primary: #1e90ff;
+            --primary-dark: #1e9099;
+            --secondary: #1e90ff;
+
+            --background-primary: #ddd;
+            --background-secondary: #66b;
+            --background-secondary-dark: #77e;
+
+            --text-primary: #000;
+            --text-link:#44a;
+            --text-link-hover: #bbf;
+        }
+
+        body{
+
+            margin: 0;
+            font-family: Roboto, sans-serif;
+            color: var(--text-primary);
+            font-weight: 400;
+            font-size: 14px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction:column;
+        }
+
+        h1{
+            font-size: 1.5 rem;
+            margin: 10px 0;
+        }
+
+        h2{
+            font-size: 1.3rem;
+            margin: 10px 0;
+        }
+
+        h3{
+           font-size:1rem;
+           margin: 10px 0; 
+        }
+
+        a:link,
+        a:visited{
+            color: var(--text-link);
+
+        }
+        a:hover,
+        a:active{
+            color: var(--text-link-hover);
+        }
+
+        /* main container */
+        main{
+            display:flex;
+            flex: 1;
+        }
+
+        /*main information - name, contact, skills */
+        main > header{
+            flex: 1;
+            background-color: var(--background-secondary);
+            padding: 0 20px;
+            max-width: 250px;
+        }
+
+        main > header > section {
+            margin: 20px 0;
+        }
+
+        main > header h2{
+            background-color: var(--background-secondary-dark);
+            padding: 10px 10px;
+            margin: 0 -10px;
+        }
+
+        /*Detailed information - education, experience */
+        main > aside{
+            flex: 2;
+            padding: 0 20px;
+        }
+
+        main > aside > section {
+            border-bottom: 1px solid #aaa;
+        }
+
+        /* Footer*/
+        footer{
+            padding: 20px;
+            margin: 20px 0 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--background-secondary-dark);
+        }
+
+        .profile-photo{
+            border-radius: 50%;
+            width: 100%;
+        }
+
+        .skill-item-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0 20px;
+        }
+
+        .skill-item-headline{
+
+        }
+
+        .skill-item-description{
+
+        }
+
+        .education-item-container{
+            display: flex;
+        }
+
+    </style>
+</head>
+
+<main>
+    <header>
+        <section>
+            <h1>Romane - Resume</h1>
+            <img class="profile-photo" src="./" alt="">
+            <p style="margin: 0;"></p>
+        </section>
+        <section>
+            <h2>Personal info</h2>
+            <div>
+                <h3>Phone</h3>
+                <a href="tel: +1234567891">1234567891</a>
+            </div>
+            <div>
+                <h3>E-mail</h3>
+                <a href="mailto:dev@dev.com">dev@dev.com</a>
+            </div>
+        </section>
+        <section>
+            <h2>Skills</h2>
+            <div class="skill-item-container">
+                <h3 class="skill-item-headline">HTML</h3>
+                <p class="skill-item-description">Intermediate</p>
+            </div>
+            <div class="skill-item-container">
+                <h3 class="skill-item-headline">CSS</h3>
+                <p class="skill-item-description"> Intermediate</p>
+            </div>
+            <div class="skill-item-container">
+                <h3 class="skill-item-headline">JavaScript</h3>
+                <p class="skill-item-description">Intermediate</p>
+            </div>
+        </section>
+    </header>
+    <aside>
+        <section>
+            <h2>Experience</h2>
+            <section>
+                <h3>Web developer</h3>
+                <p>1-20-24 - Today</p>
+                <ul>
+                    <li>Making awesome HTML and CSS websites</li>
+                    <li>Following best principles</li>
+                    <li>solving problems</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Before Dev</h3>
+                <p>Awhile ago</p>
+                <ul>
+                    <li>Making awesome HTML and css websites</li>
+                    <li>Following best practices</li>
+                    <li>Solving problems</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <h2>Education</h2>
+                <section>
+                    <h3>Institute of data web development course</h3>
+                    <p>Institute of data <time>Nov 2023 - 2024</time></p>
+                     <ul>
+                        <li>Web Development</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>express servers</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>University of Insitute</h3>
+                    <p>so and so</p>
+                    <ul>
+                        <li>so and so</li>
+                    </ul>
+                </section>
+        </section>
+    </aside>
+</main>
+<body>
+    <footer>created today</footer>
+</body>
+</html>
