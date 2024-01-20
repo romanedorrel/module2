@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Romane">
+    <title>Luis Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        :root{
+            --primary: #1e90ff;
+            --primary-dark: #1e9099;
+            --secondary: #1e90ff;
+
+            --background-primary: #ddd;
+            --background-secondary: #66b;
+            --background-secondary-dark: #77e;
+
+            --text-primary: #000;
+            --text-link:#44a;
+            --text-link-hover: #bbf;
+        }
+
+        body{
+            margin: 0;
+            font-family: Roboto, sans-serif;
+            color: var(--text-primary);
+            font-weight: 400;
+            font-size: 14px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        h2{
+            font-size: 1.3rem;
+            margin: 10px 0;
+        }
+
+        h3 {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        a:link,
+        a:visited{
+            color: var(--text-link);
+        }
+
+        a:hover,
+        a:active{
+            color: var(--text-link-hover);
+        }
+
+        /*main container */
+        main{
+            display: flex;
+            flex: 1;
+        }
+
+        /*main information - name, contact, skills */
+        main > header{
+            flex: 1;
+            background-color: var(--background-secondary);
+            padding: 0 10px;
+            max-width: 250px;
+        }
+
+        main > header section{
+            margin: 20px 0;
+        }
+
+        main > header h2{
+            background-color: var(--background-secondary-dark);
+            padding: 10px 10px;
+            margin: 0 -10px;
+        }
+
+        /*Detailed information- education, experience */
+        main > aside{
+            flex: 2;
+            padding: 0 20px;
+        }
+
+        main aside section{
+            border-bottom: 1px solid #aaa;
+        }
+
+        /*footer*/
+        footer{
+            padding: 20px;
+            margin: 20px 0 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--background-secondary-dark);
+        }
+
+        .profile-photo{
+            border-radius: 50%;
+            width: 100%;
+        }
+
+        .skill-item-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0 20px;
+        }
+
+        .education-item-container{
+            display: flex;
+        }
+
+        @media screen and (max-width: 600px){
+            body{
+                font-size: 24px;
+            }
+
+            main{
+                flex-direction: column;
+            }
+
+            main header{
+                max-width: none;
+            }
+
+            picture{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .profile-photo{
+                max-width: 300px;
+            }
+
+            header{
+                text-align: center;
+            }
+
+            .skill-item-container{
+                justify-content: space-around;
+            }
+        }
+    </style>
+</head>
+
+<main>
+    <header>
+        <section>
+            <h1>Romane - Resume</h1>
+            <picture>
+                <img class="profile-photo" src="./assets/blue_lion.jpg" alt="">
+            </picture>
+            <p style="margin: 0;">Web Developer</p>
+        </section>
+        <section>
+            <h2>Personal Info</h2>
+            <div>
+                <h3>Phone</h3>
+                <a href="tel: +1234567891">1234567891</a>
+            </div>
+            <div>
+                <h3>Email</h3>
+                <a href="mailto: dev@dev.com">dev@dev.com</a>
+            </div>
+        </section>
+        <section>
+            <h2>Skills</h2>
+            <div class="skill-item-container">
+                <h3 class="skill-item-headline">HTML</h3>
+                <p class="skill-item-description">Intermediate</p>
+            </div>
+            <div class="skill-item-container">
+                <h3 class="skill-item-headline">HTML</h3>
+                <p class="skill-item-description">Intermediate</p>
+            </div>
+            <div class="skill-item-container">
+                <h3 class="skill-item-headline">HTML</h3>
+                <p class="skill-item-description">Still learning</p>
+            </div>
+        </section>
+    </header>
+    <aside>
+        <section>
+            <h2>Experience</h2>
+            <section>
+            <h3>Web Developer</h3>
+            <p>awesome CO <time>November 2023 - Current</time></p>
+            <ul>
+                <li>Creating amazing websites with HTML and CSS</li>
+                <li>Following best practices</li>
+                <li>solving problems and working through solutions</li>
+            </ul>
+            </section>
+        </section>
+        <section>
+            <h3>not dev</h3>
+            <p>jan 1 - nov 1</p>
+            <ul>
+                <li>Creating amazing websites with HTML and CSS</li>
+                <li>Following best practices</li>
+                <li>solving problems and working through solutions</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <section>
+            <h3>IOD course</h3>
+            <p>IOD Nov 23- Nov 24</p>
+            <ul>
+                <li>Creating amazing websites with HTML and CSS</li>
+                <li>Following best practices</li>
+                <li>solving problems and working through solutions</li>
+            </ul>
+            </section>
+        </section>
+        <section>
+            <h3>University of Idk</h3>
+            <p>stuff</p>
+            <ul>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+            </ul>
+        </section>
+    </aside>
+</main>
+<body>
+    <footer>djdkdk</footer>
+</body>
+</html>
